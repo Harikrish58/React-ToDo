@@ -3,20 +3,20 @@ import React, { useState } from "react";
 const Input = ({ addTodo }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(title && description){
-        addTodo(title, description);
-    setTitle("");
-    setDescription("");
+    if (title && description) {
+      addTodo(title, description);
+      setTitle("");
+      setDescription("");
+    } else {
+      alert("Input fields cannot be empty");
     }
-    else{
-        alert("Input fieldes cannot be emplty")
-    }
-    }
-    
+  };
+
   return (
-    <div className="input">
+    <div className="input-container">
       <input
         type="text"
         value={title}
@@ -29,7 +29,9 @@ const Input = ({ addTodo }) => {
         placeholder="Todo description"
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button className="btn btn-success" onClick={handleSubmit} >Add todo</button>
+      <button className="btn btn-success" onClick={handleSubmit}>
+        Add todo
+      </button>
     </div>
   );
 };
