@@ -23,7 +23,8 @@ h2 {
 }
 
 .input-container input {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -58,6 +59,7 @@ h2 {
   background-color: #fff;
   color: #333;
   cursor: pointer;
+  width: 100%;
 }
 
 .filter-container select:focus {
@@ -66,16 +68,13 @@ h2 {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.filter-container select option {
-  padding: 6px 10px;
-}
-
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 30px;
+  gap: 20px;
 }
 
 .card {
@@ -84,6 +83,8 @@ h2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #bed3c1;
+  flex: 1 1 300px;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
@@ -166,6 +167,7 @@ h2 {
   background-color: #c82333;
 }
 
+/* Responsive adjustments for 600px */
 @media (max-width: 600px) {
   .input-container {
     flex-direction: column;
@@ -194,5 +196,159 @@ h2 {
 
   .row {
     margin: 15px;
+  }
+}
+
+/* Additional breakpoint for smaller screens (450px and below) */
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+
+  .input-container {
+    padding: 5px;
+  }
+
+  .input-container input {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .input-container button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .filter-container {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .filter-container select {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .row {
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .card-body input {
+    padding: 6px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .status {
+    margin-bottom: 10px;
+  }
+
+  .status select {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .button {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens (below 300px) */
+@media (max-width: 300px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    margin-left: 5px;
+    font-size: 1rem;
+  }
+
+  .input-container {
+    padding: 3px;
+  }
+
+  .input-container input {
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  .input-container button {
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  .filter-container {
+    margin: 5px;
+    padding: 3px;
+  }
+
+  .filter-container select {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .row {
+    margin: 5px;
+    gap: 5px;
+  }
+
+  .card {
+    margin-bottom: 8px;
+  }
+
+  .card-body {
+    padding: 8px;
+  }
+
+  .card-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .card-body input {
+    padding: 4px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .status select {
+    padding: 3px;
+    font-size: 10px;
+  }
+
+  .button {
+    gap: 5px;
+  }
+
+  .btn {
+    padding: 4px 8px;
+    font-size: 10px;
   }
 }

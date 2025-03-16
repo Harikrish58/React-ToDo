@@ -15,7 +15,7 @@ const Card = ({ element, deleteTodo, editTodo, updateTodo }) => {
   };
 
   return (
-    <div key={element.id} className="col-12 col-md-6 col-lg-4">
+    <div key={element.id} className="col-12 col-sm-6 col-md-6 col-lg-4">
       {editData ? (
         <div className="card">
           <div className="card-body">
@@ -44,7 +44,7 @@ const Card = ({ element, deleteTodo, editTodo, updateTodo }) => {
           </div>
         </div>
       ) : (
-        <div className="card" style={{ width: "24rem" }}>
+        <div className="card">
           <div className="card-body">
             <p className="card-text">Todo ID: {element.id}</p>
             <p className="card-text">Title: {element.title}</p>
